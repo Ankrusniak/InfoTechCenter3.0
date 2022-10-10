@@ -19,7 +19,26 @@ def weather():
     return weatherCondition
 weatherAlert = weather()
 def vrs():
-    if weather() == "Icy":
-        print("\nvrs has changed your alarm 30 minutes earlier based on the NWS forcast of "+weatherAlert)
+    if weatherAlert == "Icy":
+        print("\nvrs has changed your alarm 30 minutes earlier based on the NWS forcast of ",weatherAlert)
+        print("VRS will only allow your car to go 30MPH")
+    elif weatherAlert == "Snow":
+        print("\nvrs has changed your alarm 30 minutes earlier based on the NWS forcast of ",weatherAlert)
+        print("VRS will only allow your car to go 50MPH")
+    elif weatherAlert == "Rain":
+        print("\nvrs has changed your alarm 30 minutes earlier based on the NWS forcast of " ,weatherAlert)
+        print("VRS will only allow your car to go 60MPH")
+    elif weatherAlert == "Foggy":
+        print("\nvrs has changed your alarm 30 minutes earlier based on the NWS forcast of " ,weatherAlert)
+        print("VRS will only allow your car to go 60MPH")
+    elif weatherAlert == "Rain":
+        print("\nvrs has changed your alarm 30 minutes earlier based on the NWS forcast of "  ,weatherAlert)
+        print("VRS will only allow your car to go 60MPH")
+    elif weatherAlert == "Storming":
+        print("\nvrs has changed your alarm 30 minutes earlier based on the NWS forcast of " ,weatherAlert)
+        print("VRS will only allow your car to go 50MPH")
+    else:
+        print("\nThe weather today is,"+weatherAlert, "let's goooo!")
 
 vrs()
+
