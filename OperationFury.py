@@ -15,4 +15,4 @@ def gasLevelGauge() :
     gasLevelList =["Empty","Low","Quarter tank","Half tank","Three Quarter Tank","Full Tank"]
     currentGasLevel = random.choice(gasLevelList)
     print(currentGasLevel)
-    return currentGasLevel 
+    return currentGasLevel
