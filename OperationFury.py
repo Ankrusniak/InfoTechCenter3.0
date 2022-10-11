@@ -1,26 +1,24 @@
 
-#Welcome Screen
-#Developer: Andrew Krusniak
-#Version: 1.0
-
-"""
-Our Welcome Screen will start our program letting
-drivers know that the InfoTechCenter OS is Loading 
-"""
-
+#**********************************************************************************
 #Import Libraries Here
 
 from time import sleep #We imported the sleep function from the Time library
-
-print("\033[1;33m This text is Dark Blue \n")
-
-
+ import random
+ #*********************************************************************************
+#Welcome Screen                                     
+#Developer: Andrew Krusniak                         
+#Version: 1.0                                       
+# print("\033[1;33m This text is Dark Blue \n")
+                                                    
+"""                                                 
+Our Welcome Screen will start our program letting   
+drivers know that the InfoTechCenter OS is Loading  
+"""                                                 
 print("\n\nWelcome to Operation Fury InfoTech Center")
 sleep(2)
-print("\nOperation Fury's Operation system is Booting Up")
-
 
 for i in range(2):
+    print("\nOperation Fury's Operation system is Booting Up")
     print("\nOs Booting up")
     sleep(2)
     print("\033{1;36m os Booting up")
@@ -37,10 +35,10 @@ picking from a list-using a If,elif & E;se statements
 to check the condition and print a specific print line
 """
 
-#Import Libraries here
-import random
+
 #Weather condition list using the random.choic library
 #to randomly choos a condition and storing it in its brain
+
 def weather():
     weather_forcast = ["Rain","Snow","Sunny","Cloudy","Foggy","Storming","Icy"]
     weatherCondition = random.choice(weather_forcast)
