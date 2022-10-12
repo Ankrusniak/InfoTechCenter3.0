@@ -23,7 +23,8 @@ def listOFGasStations():
        gasStationNearby = random.choice(gasStation)
        return gasStationNearby
 def gasLevelAlert():
-    milesToGasStation = round(random.uniform(1, 25), 2)
+    milesToGasStation = round(random.uniform(1, 25), 2) milesToGasStation(1,25)
+    MilesToGasStationQuarterTank=round(random.uniform(1, 25), 2)
     if gasLevelIndicator == "Empty":
         print("***WARING YOU ARE ON EMPTY***\nCalling Emergency Contact")
     elif gasLevelIndicator == "Low":
