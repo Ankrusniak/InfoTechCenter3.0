@@ -4,7 +4,7 @@
 
 from time import sleep #We imported the sleep function from the Time library
 import random
- #*********************************************************************************
+#*********************************************************************************
 #Welcome Screen                                     
 #Developer: Andrew Krusniak                         
 #Version: 1.0                                       
@@ -23,7 +23,7 @@ for i in range(2):
     sleep(2)
     print("\033{1;36m os Booting up")
     sleep(2)
-
+#********************************************************************************************************
 #Gasolin
 #Programer:Andrew Krusniak
 #Version 1.0
@@ -69,9 +69,8 @@ def gasLevelAlert():
         print("Your gas tank is full,you have plenty of gas to get where you are going")
 
 
-gasLevelAlert()
 
-
+#********************************************************************************************************************
 #Weather
 #Developer:Andrew Krusniak
 #version 1.0
@@ -114,6 +113,13 @@ def vrs():
     else:
         print("\nThe weather today is,"+weatherAlert, "let's goooo!")
 
-vrs()
 
+
+#*********************************************************************************************
+#Call Functions Here...
+
+print()
+gasLevelAlert()
+
+vrs()
 
