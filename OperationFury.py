@@ -3,8 +3,8 @@
 #Import Libraries Here
 
 from time import sleep #We imported the sleep function from the Time library
- import random
- #*********************************************************************************
+import random
+#*********************************************************************************
 #Welcome Screen                                     
 #Developer: Andrew Krusniak                         
 #Version: 1.0                                       
@@ -23,7 +23,54 @@ for i in range(2):
     sleep(2)
     print("\033{1;36m os Booting up")
     sleep(2)
+#********************************************************************************************************
+#Gasolin
+#Programer:Andrew Krusniak
+#Version 1.0
 
+"""
+Define a fundtion to check our gas gauge and determine based how far
+we have until we need gasoline based on an if,elif,else
+condition
+"""
+
+#import library here
+
+#Gas level function
+def gasLevelGauge() :
+    gasLevelList =["Empty","Low","Quarter tank","Half tank","Three Quarter Tank","Full Tank"]
+    currentGasLevel = random.choice(gasLevelList)
+    return currentGasLevel
+
+# Variable calling the gasLevelGauge Function to store value once
+gasLevelIndicator = gasLevelGauge()
+def listOFGasStations():
+       gasStation = ["Shell","Circle K","Marathon","Speedway","Meijer"]
+       gasStationNearby = random.choice(gasStation)
+       return gasStationNearby
+def gasLevelAlert():
+    milesToGasStation = round(random.uniform(1,25),2)
+    milesToGasStationQuarterTank = round(random.uniform(26,50),2)
+    if gasLevelIndicator == "Empty":
+        print("***WARING YOU ARE ON EMPTY***\nCalling Emergency Contact")
+    elif gasLevelIndicator == "Low":
+        print("***WARNING***")
+        print("Your gas tank is extremely low, checking Google Maps for the closest gas station")
+        print("The closest gas station is",listOFGasStations(),"which is", milesToGasStation ,"miles away.")
+    elif gasLevelIndicator == "Quarter tank":
+        print("***WARNING***")
+        print("Your gas tank is extremely QuarterTank, checking Google Maps for the closest gas station")
+        print("The closest gas station is",listOFGasStations(),"which is", milesToGasStationQuarterTank ,"miles away.")
+    elif gasLevelIndicator == "half tank":
+        print("your gas tank is a half full,you have plenty of gas to get where you are going")
+    elif gasLevelIndicator == "Three Quarter Tank":
+        print("your gas tank is a Three Quarter Tank,you have plenty of gas to get where you are going")
+    else:
+        print("Your gas tank is full,you have plenty of gas to get where you are going")
+
+
+
+#********************************************************************************************************************
 #Weather
 #Developer:Andrew Krusniak
 #version 1.0
@@ -36,8 +83,8 @@ to check the condition and print a specific print line
 """
 
 
-#Weather condition list using the random.choic library
-#to randomly choos a condition and storing it in its brain
+#Weather condition list using the random.choice library
+#to randomly choose a condition and storing it in its brain
 
 def weather():
     weather_forcast = ["Rain","Snow","Sunny","Cloudy","Foggy","Storming","Icy"]
@@ -66,6 +113,13 @@ def vrs():
     else:
         print("\nThe weather today is,"+weatherAlert, "let's goooo!")
 
-vrs()
 
+
+#*********************************************************************************************
+#Call Functions Here...
+
+print()
+gasLevelAlert()
+
+vrs()
 
