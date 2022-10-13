@@ -23,12 +23,24 @@ def listOFGasStations():
        gasStationNearby = random.choice(gasStation)
        return gasStationNearby
 def gasLevelAlert():
-    milesToGasStation = round(random.uniform(1, 25), 2) milesToGasStation(1,25)
-    MilesToGasStationQuarterTank=round(random.uniform(1, 25), 2)
+    milesToGasStation = round(random.uniform(1,25),2)
+    milesToGasStationQuarterTank = round(random.uniform(26,50),2)
     if gasLevelIndicator == "Empty":
         print("***WARING YOU ARE ON EMPTY***\nCalling Emergency Contact")
     elif gasLevelIndicator == "Low":
         print("***WARNING***")
         print("Your gas tank is extremely low, checking Google Maps for the closest gas station")
         print("The closest gas station is",listOFGasStations(),"which is", milesToGasStation ,"miles away.")
+    elif gasLevelIndicator == "Quarter tank":
+        print("***WARNING***")
+        print("Your gas tank is extremely QuarterTank, checking Google Maps for the closest gas station")
+        print("The closest gas station is",listOFGasStations(),"which is", milesToGasStationQuarterTank ,"miles away.")
+    elif gasLevelIndicator == "half tank":
+        print("your gas tank is a half full,you have plenty of gas to get where you are going")
+    elif gasLevelIndicator == "Three Quarter Tank":
+        print("your gas tank is a Three Quarter Tank,you have plenty of gas to get where you are going")
+    else:
+        print("Your gas tank is full,you have plenty of gas to get where you are going")
+
+
 gasLevelAlert()
